@@ -6,7 +6,8 @@ namespace LemonadeStand
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("How many stands do you want to open?");
+            ont numberOfStands = int.Parse(Console.ReadLine());
         }
     }
 }
