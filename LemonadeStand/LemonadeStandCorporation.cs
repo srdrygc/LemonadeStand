@@ -10,5 +10,15 @@ namespace LemonadeStand
         public decimal totalRevenue { get; set; }
         public decimal totalExpenses { get; set; }
         public decimal totalProfit { get; set; }
+
+        public decimal GetTotalRevenueOfStands()
+        {
+            totalRevenue = 0;
+            for (int i = 0; i< numberOfLocation; i++)
+            {
+                totalRevenue += totalRevenue;
+            }
+            return totalRevenue;
+        }
     }
 }
