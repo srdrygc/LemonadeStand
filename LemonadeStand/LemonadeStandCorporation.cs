@@ -29,6 +29,10 @@ namespace LemonadeStand
             }
             return totalExpenses;
         }
+        public decimal GetTotalProfitOfStands()
+        {
+            return GetTotalRevenueOfStands() - GetTotalExpensesOfStands();
+        }
 
     }
 }
