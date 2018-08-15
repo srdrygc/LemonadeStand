@@ -34,6 +34,16 @@ namespace LemonadeStand
                 Console.WriteLine("This stand's total profit will be "
                     + newStand.GetTotalProfit());
             }
+            for (int i = 1; i <= numberOfStands; i++)
+            {
+                LemonadeStandCorporation totalsOfStands = new LemonadeStandCorporation();
+            }
+            Console.WriteLine("Total revenue");
+            LemonadeStandCorporation totals = new LemonadeStandCorporation();
+            Console.WriteLine("Total revenue is " + totals.GetTotalRevenueOfStands());
+            Console.WriteLine("Total profit is " + totals.GetTotalProfitOfStands());
+            Console.WriteLine("Total expense is " + totals.GetTotalExpensesOfStands());
+
         }
     }
 }
