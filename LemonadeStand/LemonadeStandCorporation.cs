@@ -20,5 +20,15 @@ namespace LemonadeStand
             }
             return totalRevenue;
         }
+        public decimal GetTotalExpensesOfStands()
+        {
+            totalExpenses = 0;
+            for(int i = 0; i <numberOfLocation; i++)
+            {
+                totalExpenses += totalExpenses;
+            }
+            return totalExpenses;
+        }
+
     }
 }
