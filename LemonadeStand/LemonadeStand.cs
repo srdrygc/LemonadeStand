@@ -16,5 +16,9 @@ namespace LemonadeStand
         {
             return NumberOfCups * PricePerCup;
         }
+        public decimal GetTotalExpenses()
+        {
+            return NumberOfCups * CostPerCup;
+        }
     }
 }
