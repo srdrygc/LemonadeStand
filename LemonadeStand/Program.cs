@@ -44,6 +44,8 @@ namespace LemonadeStand
             Console.WriteLine("Total profit is " + totals.GetTotalProfitOfStands());
             Console.WriteLine("Total expense is " + totals.GetTotalExpensesOfStands());
 
+            Console.ReadLine();
+
         }
     }
 }
