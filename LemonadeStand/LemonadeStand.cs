@@ -11,5 +11,10 @@ namespace LemonadeStand
         public int NumberOfCups { get; set; }
         public decimal PricePerCup { get; set; }
         public decimal CostPerCup { get; set; }
+
+        public decimal GetTotalRevenue()
+        {
+            return NumberOfCups * PricePerCup;
+        }
     }
 }
