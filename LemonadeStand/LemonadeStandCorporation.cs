@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Linq;
 
 namespace LemonadeStand
 {
@@ -10,25 +11,24 @@ namespace LemonadeStand
         public decimal totalRevenue { get; set; }
         public decimal totalExpenses { get; set; }
         public decimal totalProfit { get; set; }
+        public List<LemonadeStand> Locations { get; set; } = new List<LemonadeStand>();
 
         public decimal GetTotalRevenueOfStands()
         {
             totalRevenue = 0;
-            for (int i = 0; i< numberOfLocation; i++)
+            foreach(LemonadeStand location in Locations)
             {
-                totalRevenue += totalRevenue;
+                totalRevenue += location.GetTotalRevenue();
             }
+
             return totalRevenue;
         }
+
         public decimal GetTotalExpensesOfStands()
         {
-            totalExpenses = 0;
-            for(int i = 0; i <numberOfLocation; i++)
-            {
-                totalExpenses += totalExpenses;
-            }
-            return totalExpenses;
+            return Locations.Sum(x => x.GetTotalExpenses());
         }
+
         public decimal GetTotalProfitOfStands()
         {
             return GetTotalRevenueOfStands() - GetTotalExpensesOfStands();
