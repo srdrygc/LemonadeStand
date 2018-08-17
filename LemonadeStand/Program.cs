@@ -16,8 +16,7 @@ namespace LemonadeStand
                 Console.WriteLine("What is the name of location " + i + "?");
                 newStand.Name = Console.ReadLine();
 
-                Console.WriteLine("How many cups will you sell in this location ");
-                newStand.NumberOfCups = int.Parse(Console.ReadLine());
+                newStand.NumberOfCups = UI.GetIntegerFromUser("How many cups will you sell in this location ");
 
                 Console.WriteLine("What is the price in this location");
                 newStand.PricePerCup = decimal.Parse(Console.ReadLine());
