@@ -9,9 +9,12 @@ namespace LemonadeStand
             Console.WriteLine("How many stands do you want to open?");
             int numberOfStands = int.Parse(Console.ReadLine());
 
+            LemonadeStandCorporation corp = new LemonadeStandCorporation();
+
             for (int i = 1; i <= numberOfStands; i++)
             {
                 LemonadeStand newStand = new LemonadeStand();
+                corp.Locations.Add(newStand);
 
                 Console.WriteLine("What is the name of location " + i + "?");
                 newStand.Name = Console.ReadLine();
@@ -33,15 +36,12 @@ namespace LemonadeStand
                 Console.WriteLine("This stand's total profit will be "
                     + newStand.GetTotalProfit());
             }
-            for (int i = 1; i <= numberOfStands; i++)
-            {
-                LemonadeStandCorporation totalsOfStands = new LemonadeStandCorporation();
-            }
+            
             Console.WriteLine("Total revenue");
-            LemonadeStandCorporation totals = new LemonadeStandCorporation();
-            Console.WriteLine("Total revenue is " + totals.GetTotalRevenueOfStands());
-            Console.WriteLine("Total profit is " + totals.GetTotalProfitOfStands());
-            Console.WriteLine("Total expense is " + totals.GetTotalExpensesOfStands());
+            
+            Console.WriteLine("Total revenue is " + corp.GetTotalRevenueOfStands());
+            Console.WriteLine("Total profit is " + corp.GetTotalProfitOfStands());
+            Console.WriteLine("Total expense is " + corp.GetTotalExpensesOfStands());
 
             Console.ReadLine();
 
